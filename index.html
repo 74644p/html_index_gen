@@ -94,16 +94,34 @@
         var h2Arr = $("h2").toArray();
         var outContent = '';
         var makeOut = "";
+
         for (var i = 0, len = h2Arr.length; i < len; i++) {
 //            console.log(i);
-            outContent += "<li><a href='#'>" +  h2Arr[i].innerText + '</a></li>';
+
+            outContent += "<li><a href='#' onclick='PS_scrollTo(\".h2_" + i + "\");'>" + h2Arr[i].innerText + '</a></li>';
+            // adding class to each
+            $("h2:eq(" + i + ")").addClass("h2_" + i);
+
+
 //            outContent += i;
             console.log(h2Arr[i].innerText);
         }
         console.log(outContent);
         console.log($("h3").toArray());
-        $('#out').html(outContent) ;
+        $('#out').html(outContent);
 
     });
+
+    // scroll to class
+    var toClass = '';
+    function PS_scrollTo(toClass) {
+        if (toClass == '') {
+            toClass = '.h2_0';
+        }
+        $('html, body').animate({
+            scrollTop: ($(toClass).offset().top)
+        }, 500);
+    }
+
 </script>
 </html>

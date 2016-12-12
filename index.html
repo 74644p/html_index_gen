@@ -18,17 +18,29 @@
     ACKNOWLEDGEMENTS<BR>
     LIST OF ILLUSTRATIONS<BR>
     LIST OF TABLES<BR>
-    LIST OF ABBREVIATIONS<BR>
+    <div id="ps_abbr" class="jumbotron"><strong>LIST OF ABBREVIATIONS</strong></div>
+    <BR>
     ABSTRACT<BR>
 
     <h1>Title of Project</h1>
     <h2>Introduction</h2>
-    <p>BootstrapCDN. ... Complete CSS. HTML. Pug · Haml. Complete JavaScript. HTML. Pug · Haml · Why BootstrapCDN
-        Believes in Subresource Integrity (SRI) ...BootstrapCDN. ... Complete CSS. HTML. Pug · Haml. Complete
-        JavaScript. HTML. Pug · Haml · Why BootstrapCDN Believes in Subresource Integrity (SRI) ...BootstrapCDN. ...
-        Complete CSS. HTML. Pug · Haml. Complete JavaScript. HTML. Pug · Haml · Why BootstrapCDN Believes in Subresource
-        Integrity (SRI) ...</p>
-    <p>BootstrapCDN. ... Complete CSS. HTML. Pug · Haml. Complete JavaScript. HTML. Pug · Haml · Why BootstrapCDN
+    <p>
+        The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+
+    <HR>
+    <blockquote>
+        The smaller your reality, the more convinced you are that you know everything.
+    </blockquote>
+    <cite>My Big <abbr title="Theory Of Everything">TOE</abbr></cite>
+    <HR>
+    BootstrapCDN. ... Complete CSS. HTML. Pug · Haml. Complete JavaScript. HTML. Pug · Haml · Why BootstrapCDN
+    Believes in Subresource Integrity (SRI) ...BootstrapCDN. ... Complete CSS. HTML. Pug · Haml. Complete
+    JavaScript. HTML. Pug · Haml · Why BootstrapCDN Believes in Subresource Integrity (SRI) ...BootstrapCDN. ...
+    Complete CSS. HTML. Pug · Haml. Complete JavaScript. HTML. Pug · Haml · Why BootstrapCDN Believes in Subresource
+    Integrity (SRI) ...</p>
+    <p>
+        The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+        BootstrapCDN. ... Complete CSS. HTML. Pug · Haml. Complete JavaScript. HTML. Pug · Haml · Why BootstrapCDN
         Believes in Subresource Integrity (SRI) ...BootstrapCDN. ... Complete CSS. HTML. Pug · Haml. Complete
         JavaScript. HTML. Pug · Haml · Why BootstrapCDN Believes in Subresource Integrity (SRI) ...BootstrapCDN. ...
         Complete CSS. HTML. Pug · Haml. Complete JavaScript. HTML. Pug · Haml · Why BootstrapCDN Believes in Subresource
@@ -104,10 +116,10 @@
 
 
 //            outContent += i;
-            console.log(h2Arr[i].innerText);
+//            console.log(h2Arr[i].innerText);
         }
-        console.log(outContent);
-        console.log($("h3").toArray());
+//        console.log(outContent);
+//        console.log($("h3").toArray());
         $('#out').html(outContent);
 
     });
@@ -122,6 +134,17 @@
             scrollTop: ($(toClass).offset().top)
         }, 500);
     }
+    ;
+
+    //    $('#ps_abbr').append(  $('abbr'));
+    ps_abbr = $('abbr');
+    for (var ps_abbr_inc = 0; ps_abbr_inc < ps_abbr.length; ps_abbr_inc++) {
+
+        $('#ps_abbr').append('<BR>' + ps_abbr[ps_abbr_inc].outerText + ' = ');
+        $('#ps_abbr').append(ps_abbr[ps_abbr_inc].title);
+
+    }
+
 
 </script>
 </html>
